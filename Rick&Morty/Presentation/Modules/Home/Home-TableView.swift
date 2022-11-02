@@ -25,9 +25,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCustomCell", for: indexPath) as! HomeCustomCell
         
-        cell.display(summary: HomeCustomCellSummary(image: "https://images7.alphacoders.com/633/633262.png",
-                                                    characterName: "Morty"))
-        
+        cell.display(summary: HomeCustomCellSummary(image: viewModel.character?.image,
+                                                    characterName: viewModel.character?.name))
+
         return cell
     }
 }
