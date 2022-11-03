@@ -18,14 +18,15 @@ class HomeViewController: UIViewController {
     //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Rick & Morty"
         configureTableView(tableView.self)
-        viewModel.executeAPICalls()
-        viewModel.executeAPI()
+        viewModel.getCharactersList {
+            self.tableView.reloadData()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,7 +36,5 @@ class HomeViewController: UIViewController {
     //MARK: Functions
     
     //MARK: IBActions
-
-
 }
 

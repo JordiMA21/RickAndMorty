@@ -10,4 +10,6 @@ import Foundation
 struct HomeCustomCellSummary: Hashable {
     let image: String?
     let characterName: String?
+    let characterStatus: String?
+    let characterGender: String?
 }
