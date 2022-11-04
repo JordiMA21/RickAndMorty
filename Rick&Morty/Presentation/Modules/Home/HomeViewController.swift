@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
     //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         title = "Rick & Morty"
         configureTableView(tableView.self)
         viewModel.getCharactersList {

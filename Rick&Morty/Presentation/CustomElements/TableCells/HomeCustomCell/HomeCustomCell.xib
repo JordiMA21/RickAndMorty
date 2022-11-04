@@ -45,12 +45,26 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hT7-gS-WOP">
                                                 <rect key="frame" x="8" y="8" width="222" height="134"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ai-FO-nIl">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="4Vf-aL-ZTm">
                                                         <rect key="frame" x="0.0" y="0.0" width="222" height="34"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQu-d7-5bx">
+                                                                <rect key="frame" x="0.0" y="0.0" width="36" height="34"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="36" id="RlD-xg-TBF"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ai-FO-nIl">
+                                                                <rect key="frame" x="38" y="0.0" width="184" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NrG-aZ-bgU">
                                                         <rect key="frame" x="0.0" y="34" width="222" height="34"/>
                                                         <subviews>
@@ -69,12 +83,24 @@
                                                             <constraint firstAttribute="bottom" secondItem="gz9-HP-eC2" secondAttribute="bottom" constant="1" id="eWb-dH-4Gb"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eS7-Fa-2q0">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sFD-Kc-KdY">
                                                         <rect key="frame" x="0.0" y="68" width="222" height="66"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kak-9q-3rw">
+                                                                <rect key="frame" x="0.0" y="0.5" width="16" height="65"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="16" id="ds5-RU-EtO"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eS7-Fa-2q0">
+                                                                <rect key="frame" x="24" y="0.0" width="198" height="66"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -109,7 +135,9 @@
             <connections>
                 <outlet property="hStack" destination="DP1-i7-gZF" id="VwT-wP-tBC"/>
                 <outlet property="imageCharacter" destination="TrO-jz-tAw" id="sCQ-Ax-Hkx"/>
+                <outlet property="imageCharacterStatus" destination="kak-9q-3rw" id="6qh-qg-s3n"/>
                 <outlet property="imageGender" destination="gz9-HP-eC2" id="0OO-QM-Lki"/>
+                <outlet property="labelCharacterID" destination="WQu-d7-5bx" id="lXJ-Qi-yJJ"/>
                 <outlet property="labelCharacterName" destination="8Ai-FO-nIl" id="MZU-Ei-CAU"/>
                 <outlet property="labelCharacterStatus" destination="eS7-Fa-2q0" id="x3Z-Xw-yGG"/>
             </connections>
@@ -117,7 +145,11 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="female" width="512" height="512"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -16,6 +16,7 @@ class CharacterViewController: UIViewController {
     @IBOutlet weak var labelSpeciesDetail: UILabel!
     @IBOutlet weak var labelGenderDetail: UILabel!
     @IBOutlet weak var labelLocationDetail: UILabel!
+    @IBOutlet weak var labelOriginDetail: UILabel!
     
     
     //MARK: Properties
@@ -37,18 +38,20 @@ class CharacterViewController: UIViewController {
     
     //MARK: Functions
     private func setupBinding() {
-        self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationController?.navigationBar.tintColor = .black
         title = viewModel?.chosenCharacter.name
         imageDetail.layer.cornerRadius = 104
         if let url = URL(string: viewModel?.chosenCharacter.image ?? "") {
             imageDetail.load(url: url)
+            imageDetail.layer.borderWidth = 1
+            imageDetail.layer.borderColor = UIColor.systemBlue.cgColor
         }
-        labelNameDetail.text = viewModel?.chosenCharacter.name
+//        labelNameDetail.text = viewModel?.chosenCharacter.name
         labelStatusDetail.text = viewModel?.chosenCharacter.status
         labelSpeciesDetail.text = viewModel?.chosenCharacter.species
         labelGenderDetail.text = viewModel?.chosenCharacter.gender
         labelLocationDetail.text = viewModel?.chosenCharacter.location.name
+        labelOriginDetail.text = viewModel?.chosenCharacter.origin.name
     }
 }
 

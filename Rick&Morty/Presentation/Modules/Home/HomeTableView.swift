@@ -25,7 +25,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.display(summary: HomeCustomCellSummary(image: viewModel.resultList?[indexPath.row].image,
                                                     characterName:  viewModel.resultList?[indexPath.row].name,
                                                     characterStatus: viewModel.resultList?[indexPath.row].status,
-                                                    characterGender: viewModel.resultList?[indexPath.row].gender))
+                                                    characterGender: viewModel.resultList?[indexPath.row].gender,
+                                                    characterID: viewModel.resultList?[indexPath.row].id ?? 1))
         return cell
     }
     

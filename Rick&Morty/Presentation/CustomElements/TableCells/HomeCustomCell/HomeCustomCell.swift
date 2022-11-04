@@ -13,8 +13,9 @@ class HomeCustomCell: UITableViewCell {
     @IBOutlet weak var imageCharacter: UIImageView!
     @IBOutlet weak var labelCharacterName: UILabel!
     @IBOutlet weak var imageGender: UIImageView!
-    //    @IBOutlet weak var labelCharacterStatus: UILabel!
     @IBOutlet weak var labelCharacterStatus: UILabel!
+    @IBOutlet weak var imageCharacterStatus: UIImageView!
+    @IBOutlet weak var labelCharacterID: UILabel!
     @IBOutlet weak var hStack: UIStackView!
     
     //MARK: Properties
@@ -36,9 +37,18 @@ class HomeCustomCell: UITableViewCell {
             imageGender.image = UIImage(named: "unknown")
         }
         
+        if summary.characterStatus == "Alive" {
+            imageCharacterStatus.tintColor = .green
+        } else if summary.characterStatus == "Dead" {
+            imageCharacterStatus.tintColor = .red
+        } else if summary.characterStatus == "unknown" {
+            imageCharacterStatus.tintColor = .gray
+        }
+        
         labelCharacterName.text = summary.characterName
         labelCharacterName.font = labelCharacterName.font.withSize(22)
         labelCharacterStatus.text = summary.characterStatus
+        labelCharacterID.text = "\(summary.characterID)"
     }
     
     override func prepareForReuse() {

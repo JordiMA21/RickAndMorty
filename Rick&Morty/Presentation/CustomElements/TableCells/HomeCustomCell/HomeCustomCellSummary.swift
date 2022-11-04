@@ -12,4 +12,5 @@ struct HomeCustomCellSummary: Hashable {
     let characterName: String?
     let characterStatus: String?
     let characterGender: String?
+    let characterID: Int
 }
