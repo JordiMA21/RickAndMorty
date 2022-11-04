@@ -208,17 +208,22 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="firstSeenStack" destination="Q3s-ht-gOE" id="3OW-Gp-uyK"/>
+                        <outlet property="genderStack" destination="PDE-G3-CEG" id="hqR-WB-Nle"/>
                         <outlet property="imageDetail" destination="d5b-ty-5Wj" id="tew-qd-1JI"/>
                         <outlet property="labelGenderDetail" destination="sxa-KU-sTo" id="jpc-q3-4S2"/>
                         <outlet property="labelLocationDetail" destination="v9O-RQ-5bT" id="uTq-Mh-3Bh"/>
                         <outlet property="labelOriginDetail" destination="dOc-yY-38o" id="aS6-ud-Ltw"/>
                         <outlet property="labelSpeciesDetail" destination="bip-dp-oed" id="Rmb-hl-mIN"/>
                         <outlet property="labelStatusDetail" destination="HC1-Oo-xgb" id="mQA-mn-xzL"/>
+                        <outlet property="locationSyack" destination="dOr-pZ-YMA" id="qh1-Dl-4VF"/>
+                        <outlet property="speciesStack" destination="Yyi-Be-fWE" id="Vf7-LT-cSB"/>
+                        <outlet property="statusStack" destination="Tbn-mZ-Vej" id="pw0-CX-Lez"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23.188405797101453" y="128.57142857142856"/>
+            <point key="canvasLocation" x="280" y="35"/>
         </scene>
     </scenes>
     <resources>

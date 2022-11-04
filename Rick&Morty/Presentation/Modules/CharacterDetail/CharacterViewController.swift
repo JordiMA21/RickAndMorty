@@ -17,6 +17,11 @@ class CharacterViewController: UIViewController {
     @IBOutlet weak var labelGenderDetail: UILabel!
     @IBOutlet weak var labelLocationDetail: UILabel!
     @IBOutlet weak var labelOriginDetail: UILabel!
+    @IBOutlet weak var locationSyack: UIStackView!
+    @IBOutlet weak var firstSeenStack: UIStackView!
+    @IBOutlet weak var statusStack: UIStackView!
+    @IBOutlet weak var speciesStack: UIStackView!
+    @IBOutlet weak var genderStack: UIStackView!
     
     
     //MARK: Properties
@@ -46,12 +51,18 @@ class CharacterViewController: UIViewController {
             imageDetail.layer.borderWidth = 1
             imageDetail.layer.borderColor = UIColor.systemBlue.cgColor
         }
-//        labelNameDetail.text = viewModel?.chosenCharacter.name
         labelStatusDetail.text = viewModel?.chosenCharacter.status
         labelSpeciesDetail.text = viewModel?.chosenCharacter.species
         labelGenderDetail.text = viewModel?.chosenCharacter.gender
         labelLocationDetail.text = viewModel?.chosenCharacter.location.name
         labelOriginDetail.text = viewModel?.chosenCharacter.origin.name
+        
+        locationSyack.layer.cornerRadius = 16
+        firstSeenStack.layer.cornerRadius = 16
+        statusStack.layer.cornerRadius = 16
+        speciesStack.layer.cornerRadius = 16
+        genderStack.layer.cornerRadius = 16
+
     }
 }
 

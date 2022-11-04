@@ -142,6 +142,7 @@
 				5DED398C291280FF006EF0A3 /* App */,
 				5DED398D2912810C006EF0A3 /* Modules */,
 				5DED399529128294006EF0A3 /* CustomElements */,
+				5DED39882912806A006EF0A3 /* Resources */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -213,7 +214,6 @@
 				5DED399A291282B4006EF0A3 /* HomeCustomCellSummary.swift */,
 				5DED3998291282B4006EF0A3 /* HomeCustomCell.swift */,
 				5DED3999291282B4006EF0A3 /* HomeCustomCell.xib */,
-				5DED39882912806A006EF0A3 /* Resources */,
 			);
 			path = HomeCustomCell;
 			sourceTree = "<group>";
