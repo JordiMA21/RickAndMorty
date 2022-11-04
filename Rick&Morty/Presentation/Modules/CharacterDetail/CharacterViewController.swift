@@ -11,7 +11,6 @@ class CharacterViewController: UIViewController {
     
     //MARK: IBOutlets
     @IBOutlet weak var imageDetail: UIImageView!
-    @IBOutlet weak var labelNameDetail: UILabel!
     @IBOutlet weak var labelStatusDetail: UILabel!
     @IBOutlet weak var labelSpeciesDetail: UILabel!
     @IBOutlet weak var labelGenderDetail: UILabel!
