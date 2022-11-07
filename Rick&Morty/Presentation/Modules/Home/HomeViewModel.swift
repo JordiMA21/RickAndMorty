@@ -15,7 +15,6 @@ class HomeViewModel {
     var info: Info?
     var limit = 20
     var pageNum = 1
-    var reloadLimit = 5
     
     //MARK: APIFunctions
     func getCharactersList(completed: @escaping () -> ()) {

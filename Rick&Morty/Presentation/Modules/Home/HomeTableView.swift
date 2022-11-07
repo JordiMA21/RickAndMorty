@@ -43,9 +43,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row >= (viewModel.resultList?.count ?? viewModel.limit) - 5 {
-            viewModel.pageNum += 1
-            viewModel.getCharactersList {
-                self.tableView.reloadData()
+            if viewModel.info?.pages != viewModel.pageNum {
+                viewModel.pageNum += 1
+                viewModel.getCharactersList {
+                    self.tableView.reloadData()
+                }
             }
         }
     }
