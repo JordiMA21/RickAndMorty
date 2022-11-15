@@ -15,7 +15,7 @@ struct Character: Decodable {
     let type: String?
     let gender: String?
     let origin: Origin
-    let location: Location
+    let location: CharacterLocation
     let image: String?
     let episode: [String]
 }
