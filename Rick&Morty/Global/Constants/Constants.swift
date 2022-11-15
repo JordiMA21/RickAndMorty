@@ -8,12 +8,25 @@
 import Foundation
 
 enum Endpoint {
-    case production
+    case character
+    case episode
+    case location
     
-    var urlPath: String {
+    var urlPath: URLComponents {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = "https"
+        urlComponents.host = "rickandmortyapi.com"
+        urlComponents.path.append("/api/")
         switch self {
-            case .production:
-                return "https://rickandmortyapi.com/api/"
+            case .character:
+                urlComponents.path.append("character/")
+                return urlComponents
+            case .episode:
+                urlComponents.path.append("episode/")
+                return urlComponents
+            case .location:
+                urlComponents.path.append("location/")
+                return urlComponents
         }
     }
 }
