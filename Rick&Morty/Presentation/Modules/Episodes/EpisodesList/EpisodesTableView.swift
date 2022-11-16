@@ -24,8 +24,8 @@ extension EpisodesViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EpisodeCustomCell", for: indexPath) as! EpisodeCustomCell
         
         cell.display(summary: EpisodeCustomCellSummary(episodeName: viewModel.episodesList[indexPath.row].name,
-                                                       episodeNum: viewModel.episodesList[indexPath.row].episode,
-                                                       episodeID: viewModel.episodesList[indexPath.row].id ?? 1))
+                                                       episodeAirDate: viewModel.episodesList[indexPath.row].airDate,
+                                                       episodeNum: viewModel.episodesList[indexPath.row].episode))
         
         return cell
     }

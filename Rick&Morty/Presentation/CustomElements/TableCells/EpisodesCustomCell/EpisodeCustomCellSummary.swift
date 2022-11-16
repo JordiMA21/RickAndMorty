@@ -9,6 +9,6 @@ import Foundation
 
 struct EpisodeCustomCellSummary: Hashable {
     let episodeName: String?
+    let episodeAirDate: String?
     let episodeNum: String?
-    let episodeID: Int
 }
