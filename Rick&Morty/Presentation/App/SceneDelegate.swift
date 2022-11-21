@@ -22,13 +22,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         windowsScene.windows.first?.rootViewController = tabBarController
         
-//        let storyBoard: UIStoryboard = UIStoryboard(name: "HomeViewController", bundle: nil)
-//        let homeNavViewController = storyBoard.instantiateViewController(withIdentifier: "HomeNavViewController")
-//
-//        homeNavViewController.tabBarItem = UITabBarItem(title: "Eye", image: UIImage(systemName: "eye"), tag: 0)
-        
-//        tabBarController.viewControllers?.append(homeNavViewController)
-        
         tabBarController.viewControllers = [
             UINavigationController(rootViewController: CharactersBuilder.buildCharacters()),
             UINavigationController(rootViewController: EpisodesBuilder.buildEpisodes()),

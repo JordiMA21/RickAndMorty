@@ -33,12 +33,16 @@ extension CharactersViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let storyBoard: UIStoryboard = UIStoryboard(name: "CharacterViewController", bundle: nil)
-        guard let characterViewController = storyBoard.instantiateViewController(withIdentifier: "CharacterViewController") as? CharacterViewController else { return }
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "CharacterDetailStoryboard", bundle: nil)
+        guard let characterDetailViewController = storyBoard.instantiateViewController(withIdentifier: "CharacterDetailViewController") as? CharacterDetailViewController else { return }
+        
         let selectedCharacter = viewModel.charactersList[indexPath.row]
-        let characterViewModel = CharacterViewModel(character: selectedCharacter)
-        characterViewController.viewModel = characterViewModel
-        self.navigationController?.pushViewController(characterViewController, animated: true)
+        
+        let characterDetailViewModel = CharacterDetailViewModel(character: selectedCharacter)
+        characterDetailViewController.viewModel = characterDetailViewModel
+        
+        self.navigationController?.pushViewController(characterDetailViewController, animated: true)
         print("The selected character is the number: \(selectedCharacter.id)")
     }
     

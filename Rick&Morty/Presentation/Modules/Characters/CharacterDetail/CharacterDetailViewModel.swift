@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CharacterViewModel {
+class CharacterDetailViewModel {
     
     //MARK: Properties
     var chosenCharacter: Character
