@@ -27,14 +27,14 @@ class CharactersViewController: UIViewController {
     //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupBindings()
+        setupUI()
         configureSearchBar()
         configureTableView(charactersTableView.self)
         setupViewModel()
     }
     
     // MARK: - Functions
-    private func setupBindings() { //SetupUI -> cambiarlo
+    private func setupUI() {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         goToTopButton.layer.cornerRadius = 16
     }

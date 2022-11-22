@@ -80,6 +80,20 @@ class APICalls {
         }
     }
     
+    func getDetailEpisode(path: String?) async throws -> Episode {
+        
+        let url = URL(string: path ?? "")
+        
+        guard let endPoint = url else { throw ErrorMessage(type: .urlError) }
+        do {
+            let (data, _) = try await URLSession.shared.data(from: endPoint)
+            let resultModel = try JSONDecoder().decode(Episode.self, from: data)
+            return resultModel
+        } catch {
+            throw ErrorMessage(type: .dataError)
+        }
+    }
+    
     func getLocationsList(page: Int?, name: String?) async throws -> LocationResults {
         
         var locationURLComponents = Endpoint.location.urlPath

@@ -10,21 +10,21 @@ import UIKit
 class LocationCustomCell: UITableViewCell {
 
     //MARK: IBOutlets
-    @IBOutlet weak var typeName: UILabel!
-    @IBOutlet weak var locationName: UILabel!
-    @IBOutlet weak var dimesionName: UILabel!
+    @IBOutlet weak var labelTypeName: UILabel!
+    @IBOutlet weak var labelLocationName: UILabel!
+    @IBOutlet weak var labelDimesionName: UILabel!
     @IBOutlet weak var vStack: UIStackView!
     
     //MARK: Properties
     
     //MARK: Functions
     func display(summary: LocationCustomCellSummary) {
-        typeName.text = summary.typeName
-        locationName.text = summary.locationName
-        dimesionName.text = summary.dimesionName
+        labelTypeName.text = summary.typeName
+        labelLocationName.text = summary.locationName
+        labelDimesionName.text = summary.dimesionName
         
         if summary.dimesionName == "" {
-            dimesionName.text = "unknown"
+            labelDimesionName.text = "unknown"
         }
               
         vStack.layer.cornerRadius = 16
