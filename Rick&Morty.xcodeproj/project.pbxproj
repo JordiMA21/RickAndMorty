@@ -179,13 +179,6 @@
 			path = OneDetailCell;
 			sourceTree = "<group>";
 		};
-		5D388D69291E47150051D459 /* EpidoseDetail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = EpidoseDetail;
-			sourceTree = "<group>";
-		};
 		5D388D71291E6E810051D459 /* EpisodesList */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,7 +244,6 @@
 			isa = PBXGroup;
 			children = (
 				5D388D71291E6E810051D459 /* EpisodesList */,
-				5D388D69291E47150051D459 /* EpidoseDetail */,
 			);
 			path = Episodes;
 			sourceTree = "<group>";
